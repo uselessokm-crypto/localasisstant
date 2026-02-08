@@ -45,7 +45,7 @@ async def startup_event():
     
     # Initialize LLM (using a smaller model for API-based access)
     try:
-        assistant_llm = GemmaWrapper(model_name="unsloth/gemma-3n-E2B-it-GGUF", quantize=True)
+        assistant_llm = GemmaWrapper(model_name="google/gemma-2b-it", quantize=True)
     except Exception as e:
         print(f"Error initializing LLM: {e}")
         # Fallback to alternative model
