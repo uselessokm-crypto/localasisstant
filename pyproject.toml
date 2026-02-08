@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "local-voice-assistant"
+version = "0.1.0"
+description = "A local voice assistant similar to Alexa/Cortana using small LLMs"
+authors = [{name = "Developer", email = "dev@example.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.35.0",
+    "accelerate>=0.20.0",
+    "sentencepiece",
+    "numpy",
+    "scipy",
+    "librosa",
+    "sounddevice",
+    "pyaudio",
+    "speechrecognition",
+    "gTTS",
+    "uvicorn",
+    "fastapi",
+    "pydantic",
+    "python-dotenv",
+    "huggingface_hub"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "mypy"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
