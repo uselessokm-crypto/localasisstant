@@ -138,7 +138,7 @@ def main():
     # Create assistant instance
     assistant = LocalVoiceAssistant(
         wake_word="capri",  # Activation word
-        llm_model="unsloth/gemma-3n-E2B-it-GGUF"  # Use the instruction-tuned model
+        llm_model="google/gemma-2b-it"  # Use the instruction-tuned model
     )
     
     try:
