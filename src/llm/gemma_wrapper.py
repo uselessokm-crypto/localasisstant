@@ -10,7 +10,7 @@ class GemmaWrapper:
     Supports both 2B and 7B variants with quantization for better performance on limited hardware
     """
     
-    def __init__(self, model_name="google/gemma-2b", quantize=True):
+    def __init__(self, model_name="unsloth/gemma-3n-E2B-it-GGUF", quantize=True):
         self.model_name = model_name
         self.quantize = quantize
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
